@@ -5,7 +5,7 @@
 	"background_color": "#034a82",
 	"display": "fullscreen",
 	"scope": "/",
-	"start_url": "/index.html?fullscreen=true",
+	"start_url": "/bng/index.html?fullscreen=true",
 	"icons": [
 		{
 			"src": "assets/app-icons/android/launchericon-512x512.png",
