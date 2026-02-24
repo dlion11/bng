@@ -13,8 +13,14 @@
 			"purpose": "maskable"
 		},
 		{
+			"src": "assets/app-icons/android/launchericon-192x192.png",
+			"sizes": "192x192",
+			"purpose": "maskable"
+		},
+		{
 			"src": "assets/app-icons/android/launchericon-144x144.png",
-			"sizes": "144x144"
+			"sizes": "144x144",
+			"purpose": "maskable"
 		},
 		{
 			"src": "assets/app-icons/android/launchericon-96x96.png",

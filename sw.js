@@ -1,4 +1,4 @@
-const cacheName = 'offline-cache-v0.1.4'
+const cacheName = 'offline-cache-v0.1.5'
 const cacheUrls = ['index.html', 'app.js', 'lib.js', 'styles.css', 'favicon.png']
 
 // Installing the Service Worker
