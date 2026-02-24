@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" href="favicon.png">
+		<link rel="manifest" href="manifest.json" />
+		<title>Bingo Draw</title>
+		<link rel="stylesheet" href="./styles.css">
+		<script type="module" src="lib.js" defer></script>
+		<script type="module" src="app.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<div class="drawn">
+				<span class="drawn-letter"></span>
+				<div class="spinner hidden"></div>
+				<span class="drawn-number"></span>
+			</div>
+			<div class="controls">
+				<button id="btn-draw" class="hidden">Draw</button>
+				<button id="btn-restart">Restart</button>
+
+				<span>
+					<input type="checkbox" name="tts" id="tts">
+					<label for="tts">Voice</label>
+				</span>
+
+				<span>
+					<input type="checkbox" name="screen" id="screen">
+					<label for="screen">Keep screen on</label>
+				</span>
+			</div>
+		</main>
+		<section id="history__section">
+		</section>
+
+		<script defer>
+			// Register service worker
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", () => {
+					navigator.serviceWorker
+						.register("./sw.js")
+						.then((reg) => console.log("Service Worker: Registered"))
+						.catch((err) => console.error(`Service worker: Error: ${err}`))
+				})
+			} else {
+				console.log('Service workers are not supported in this browser/context.')
+			}
+		</script>
+	</body>
+
+</html>
